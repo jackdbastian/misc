@@ -30,9 +30,9 @@ BBRefScrape <- function(page){
       html_nodes("#team_batting tr:nth-child(3) a") %>%
       html_text()
   
-  df <- tibble(player_name = player_name, SB = SB)
+  df <- tibble(name = player_name, SB = SB)
   
-  df
+  return(df)
 }
 
 # Using the scraping function to create a dataframe of SFG second baseman
